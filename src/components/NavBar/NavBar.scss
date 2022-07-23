@@ -1,0 +1,35 @@
+.navbar-primary {
+    float: left;
+    width: 100%;
+    background-color: rgb(138, 10, 131);
+    box-shadow: 1px 3px 5px #e7e7e7;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 60px;
+    align-items: center;
+    ul {
+        list-style: none;
+        display: flex;
+        margin-right: 220px;
+        gap: 1rem;
+        li {
+            margin: 0px 10px;
+            button {
+                background: none;
+                color: #e7e7e7;
+                border: none;
+                font-size: 12px;
+                cursor: pointer;
+                text-transform: uppercase;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }        
+    } 
+}
+
+.cart-widget {
+    display: flex;
+    align-items: center;
+}
