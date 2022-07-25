@@ -2,11 +2,12 @@
     float: left;
     width: 100%;
     background-color: rgb(27, 26, 26);
-    // box-shadow: 1px 3px 5px #e7e7e7;
+    box-shadow: 1px 3px 5px #5c5b5b;
     display: flex;
     justify-content: space-between;
     padding: 5px 60px;
     align-items: center;
+    margin-bottom: 2rem;
     ul {
         list-style: none;
         display: flex;
@@ -18,7 +19,7 @@
                 background: none;
                 color: #ece8e8;
                 border: none;
-                font-size: 12px;
+                font-size: 17px;
                 cursor: pointer;
                 text-transform: uppercase;
                 &:hover {

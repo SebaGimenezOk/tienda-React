@@ -1,0 +1,43 @@
+.Item-Product {
+    display: flex;
+    padding: 2em 1em 2em 1em;
+    width: 20%;
+ 
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    // margin-left: 2rem;
+    // margin-top: 3rem;
+    background-color: rgb(61, 46, 36);
+}
+
+.caja-foto{
+width: 60%;
+height: 60%;
+object-fit: cover;
+}
+
+button {
+    background-color: rgba(0, 255, 255, 0);
+    border: none;
+    font-weight: 500;
+    margin-top: 19px;
+    color: rgb(255, 195, 29);
+    font-size: 26px;
+}
+
+.P-Products {
+    color: aliceblue;
+    font-weight: 400;
+    font-size: 32px;
+
+}
+
+.P-Precios {
+    color: aliceblue;
+    font-weight: 500;
+    font-size: 31px;
+    
+}

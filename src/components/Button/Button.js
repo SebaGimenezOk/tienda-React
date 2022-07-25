@@ -6,7 +6,7 @@ function CartWidget() {
     return (
       <>
     <Button className='carrito'>
-         <ShoppingCartOutlinedIcon s/>
+         <ShoppingCartOutlinedIcon />
          </Button> 
       </>
   );

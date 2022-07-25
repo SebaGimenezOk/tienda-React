@@ -1,13 +1,20 @@
-import NavBar from './components/NavBar/NavBar';
-import './App.scss';
+
+import "./App.scss";
+import "./components/NavBar/NavBar.scss";
+import Navegador from "./components/NavBar/NavBar.js"
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 
 
 function App() {
+
   return (
-    <div className="container App">
-    <NavBar/>
-    <h1> holas</h1>
+    <div>
+      <Navegador />
+      <ItemListContainer section ="PRODUCTOS EN OFERTA"/>
+      <ItemListContainer section ="PRODUCTOS SIN STOCK"/>
+
+
 
     </div>
   );
