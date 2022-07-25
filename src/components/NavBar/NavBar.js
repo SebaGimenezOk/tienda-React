@@ -4,6 +4,7 @@ import CartWidget from '../Button/Button';
 
 
 
+
 const NavBar = () => {
     return (
         <div className='navbar-primary'>

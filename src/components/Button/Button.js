@@ -1,9 +1,13 @@
 import Button from 'react-bootstrap/Button';
+import './Button.scss';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 function CartWidget() {
     return (
       <>
-    <Button variant="dark">Dark</Button> <Button variant="link">Link</Button>
+    <Button className='carrito'>
+         <ShoppingCartOutlinedIcon s/>
+         </Button> 
       </>
   );
 }
