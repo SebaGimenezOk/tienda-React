@@ -3,6 +3,7 @@ import './ItemListContainer.scss'
 import ItemProduct from "../ItemProduct/ItemProduct"
 
 const ItemListContainer = ({ section }) => {
+   
     return (
         <div className="item-container">
             <h1 className="titles">{section}</h1>

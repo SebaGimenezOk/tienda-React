@@ -2,10 +2,12 @@
 import { useState, useEffect } from 'react'
 import './ItemProduct.scss'
 
+
+
 const ItemProduct = ({ data, action }) => {
     const [contador, setContador] = useState(2)
 
-    const { title, img, price } = data;
+    const { title, img, price, stock } = data;
 
     const addNumber = () => {
         setContador(contador + 1)
