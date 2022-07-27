@@ -13,9 +13,7 @@ function App() {
       <Navegador />
       <ItemListContainer section ="PRODUCTOS EN OFERTA"/>
       <ItemListContainer section ="PRODUCTOS SIN STOCK"/>
-
-
-
+    
     </div>
   );
 }
