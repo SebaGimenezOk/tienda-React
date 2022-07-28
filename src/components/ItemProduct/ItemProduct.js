@@ -5,9 +5,11 @@ import './ItemProduct.scss'
 
 
 const ItemProduct = ({ data, action }) => {
-    const [contador, setContador] = useState(2)
 
-    const { title, img, price, stock } = data;
+    
+    const { title, img, price, stock} = data;
+
+    const [contador, setContador] = useState(1)
 
     const addNumber = () => {
         setContador(contador + 1)
@@ -27,12 +29,13 @@ const ItemProduct = ({ data, action }) => {
         <div className="Item-Product">
             <img className="caja-foto" src={`./assets/${img}`} alt="imagen producto" />
             <p className="P-Products">{title}</p>
-            <span className='P-Precios'> $ {price} </span>
+            <span className='P-Precios'> ${price} </span>
             <div className="countProd">
-                <button onClick={addNumber} >+</button>
+                <button onClick={removeNumber} >-</button>
                 <p className='P-Precios'>{contador}</p>
-                <button onClick={removeNumber}>-</button>
+                <button onClick={addNumber}>+</button>
             </div>
+            <p> en stock: {stock} </p>
             <button onClick={action}> COMPRAR </button>
         </div>
 
