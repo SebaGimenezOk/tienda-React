@@ -1,29 +1,41 @@
-
 import './ItemListContainer.scss'
-import ItemProduct from "../ItemProduct/ItemProduct"
+import products from '../utils/products.mock'
+import { useEffect,useState } from 'react'
+import ItemList from '../ItemList/ItemList'
+
 
 const ItemListContainer = ({ section }) => {
-    const produc01 = {
-        title: 'reggiano',
-        price: 1999,
-        img: 'reggiano.png',
-        stock: 18
-    }
-    const produc02 = {
-        title: 'holandex',
-        price: 999,
-        img: 'holanda.png',
-        stock: 20
-    }
-    const handleSubmit = () => { console.log("envia info"); }
+
+    const [listProducts, setListProducts] = useState([])
+
+
+const getProducts = new Promise((resolve, reject) => {
+    resolve(products)
+})
+
+useEffect(()=>{
+
+    getProducts
+    .then ((res)=>{
+        setListProducts(res)
+    })
+    .catch((error)=>{
+        console.log("error");
+    })
+    .finally(()=>{
+    
+    })
+
+
+})
+
+
+
 
     return (
         <div className="item-container">
             <h1 className="titles">{section}</h1>
-            <ItemProduct data={produc02} action={handleSubmit} />
-
-            <ItemProduct data={produc01} action={handleSubmit} />
-
+            <ItemList dataProducts={listProducts}/>
         </div>
     )
 }
