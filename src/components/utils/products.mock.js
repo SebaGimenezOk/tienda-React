@@ -11,7 +11,7 @@ const products = [
     id:"2",
     title: "cremoso",
     price: 1400,
-    img:'cremoso.png',
+    img:'cremosoComun.png',
     stock: 20,
 },
 {
@@ -28,13 +28,13 @@ const products = [
     img:'sardo.png',
     stock: 20,
 },
-{
-    id:"5",
-    title: "sobresito",
-    price: 400,
-    img:'sobre.png',
-    stock: 20,
-},
+// {
+//     id:"5",
+//     title: "sobresito",
+//     price: 400,
+//     img:'quesobresito.png',
+//     stock: 20,
+// },
 ]
 
 export default products;
