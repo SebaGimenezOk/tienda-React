@@ -1,5 +1,5 @@
 import './ItemDetailContainer.scss'
-// import products from '../utils/products.mock'
+import artic from '../utils/articulo.mock'
 import { useEffect, useState } from 'react'
 // import ItemList from '../ItemList/ItemList'
 import ItemDetail from '../ItemDetail/ItemDetail'
@@ -9,13 +9,13 @@ const ItemDetailContainer = ({ section }) => {
     const [products, setProducts]=useState([]);
 
 
-    const getProducts = new Promise((resolve, reject) => {
+    const traer = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(products)
         }, 2000)
     })
     useEffect(() => {
-        getProducts
+        traer
             .then((res) => {
                 setProducts(res)
             })
@@ -27,8 +27,8 @@ const ItemDetailContainer = ({ section }) => {
             })
     })
     return (
-        <div className="">
-            <ItemDetail datos={products}/>
+        <div className="item-container">
+            <ItemDetail datos={artic[2]}/>
         </div>
         );
     }

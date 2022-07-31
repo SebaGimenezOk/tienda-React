@@ -6,7 +6,7 @@ import Navegador from "./components/NavBar/NavBar.js"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 // import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 // import{BrowserRouter, Routes, Route} from "react-router-dom"
-
+import * as React from 'react';
 
 function App() {
 
