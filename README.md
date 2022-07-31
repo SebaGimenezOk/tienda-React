@@ -1,6 +1,36 @@
-# Getting Started with Create React App
+### Proyecto React Comisión 34685 
+## CoderHouse
+# Profe Cristian Ortiz 
+
+# Tienda e-Commerce para Lácteos Ponteclé.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Este proyecto se une a un proyecto anterior durante el curso de DesarrolloWeb donde creamos un sitio web responsive.
+con react si bien es una SPA, la parte lógica se reutilizara para aplicarla en el sitio.
+
+Por ende los componentes deberan coincidr con la maquetacion del primer sitio.
+
+**Dentro de este proyecto intentaremos:**
+
++ Crear los componentes.
+
++ Crear las funciones para que los productos se muestren de manera dinámica.
+
++ Crear el routing y navegación para mayor efectividad y velocidad en la creación de los componentes.
+
+
++
+
+
++
+
+
+
+
+
+
+
 
 ## Available Scripts
 
