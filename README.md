@@ -6,10 +6,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Este proyecto se une a un proyecto anterior durante el curso de DesarrolloWeb donde creamos un sitio web responsive.
-con react si bien es una SPA, la parte lógica se reutilizara para aplicarla en el sitio.
+Este proyecto se une a uno anterior, realizado durante el curso de Desarrollo Web; allí creamos un sitio web responsive.
+Ahora, con React si bien es una SPA, la parte lógica se podría reutilizr para aplicarla en el sitio.
 
-Por ende los componentes deberan coincidr con la maquetacion del primer sitio.
+Por ende los componentes deberan coincidr con la maquetación del primer sitio.
 
 **Dentro de este proyecto intentaremos:**
 
