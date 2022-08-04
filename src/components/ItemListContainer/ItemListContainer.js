@@ -8,7 +8,7 @@ const ItemListContainer = ({ products }) => {
 
     const [listProducts, setListProducts] = useState([])
     const { Category } = useParams();
-    const filterCategory = products.filter((products) => products.category === Category)
+    const filterCategory = products.filter((products) => products.Category === Category)
 
 
 
