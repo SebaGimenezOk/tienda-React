@@ -1,22 +1,31 @@
 
 import "./App.scss";
-import "./components/NavBar/NavBar.scss";
+import Footer from "./components/Footer/Footer";
 import Navegador from "./components/NavBar/NavBar.js"
-// import ItemDetail from "./components/ItemDetail/ItemDetail";
-import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
-// import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-// import{BrowserRouter, Routes, Route} from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import * as React from 'react';
+import Home from "./components/pages/Home/Home";
+import Contact from "./components/pages/Contact/Contact";
+import Nosotros from "./components/pages/Nosotros/Nosotros";
+import Products from "./components/pages/Products/Products";
+import Category from "./components/pages/Category/Category";
+
+
 
 function App() {
 
   return (
-    <div>
+    <BrowserRouter>
       <Navegador />
-      {/* <ItemListContainer section ="PRODUCTOS EN OFERTA"/>
-      <ItemListContainer section ="PRODUCTOS SIN STOCK"/> */}
-      <ItemDetailContainer item={2}/>
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/Nosotros" element={<Nosotros/>}/>
+        <Route path="/Contact" element={<Contact/>} />
+        <Route path="/Category" element={<Category/>} />
+        <Route path="/:category: id" element={<Products/>}/>
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,22 @@
+.footer {
+    width: 100%;
+    background-color: rgb(27, 26, 26);
+    display: flex;
+    justify-content: baseline;
+    margin-bottom: 2rem;
+    padding: 1rem 4rem 3rem ;
+    height: 30vh;
+}
+
+.iconos-footer {
+    list-style: none;
+    color: #ece8e8;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(27, 26, 26, 0.685);
+    padding: 1rem;
+
+
+}

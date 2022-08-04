@@ -1,8 +1,8 @@
 import './ItemDetailContainer.scss'
-import artic from '../utils/articulo.mock'
+import artic from '../utils/products.mock'
 import { useEffect, useState } from 'react'
-// import ItemList from '../ItemList/ItemList'
-import ItemDetail from '../ItemDetail/ItemDetail'
+import ItemProduct from '../ItemProduct/ItemProduct'
+// import ItemDetail from '../ItemDetail/ItemDetail'
 
 const ItemDetailContainer = ({ section }) => {
 
@@ -28,7 +28,7 @@ const ItemDetailContainer = ({ section }) => {
     })
     return (
         <div className="item-container">
-            <ItemDetail datos={artic[2]}/>
+            <ItemProduct datos={artic[2]}/>
         </div>
         );
     }

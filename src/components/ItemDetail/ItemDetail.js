@@ -1,9 +1,13 @@
 import './ItemDetail.scss'
 import Card from 'react-bootstrap/Card';
 import ItemCount from '../ItemCount/ItemCount';
+import React from 'react';
 
 
-function ItemDetail({ datos, action }) {
+
+
+
+function ItemDetail({ datos,}) {
     const { title, price, img, stock, description } = datos;
 
     return (

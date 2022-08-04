@@ -1,42 +1,48 @@
 import './ItemListContainer.scss'
-import products from '../utils/products.mock'
 import { useEffect, useState } from 'react'
 import ItemList from '../ItemList/ItemList'
+import { useParams } from 'react-router-dom'
 
 
-const ItemListContainer = ({ section }) => {
+const ItemListContainer = ({ products }) => {
 
     const [listProducts, setListProducts] = useState([])
+    const { Category } = useParams();
+    const filterCategory = products.filter((products) => products.category === Category)
 
 
-    const getProducts = new Promise((resolve, reject) => {
-        resolve(products)
+
+    const getProduct = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (Category === "duros" || Category === "blandos" || Category === "estacionados") {
+                resolve(filterCategory)
+            }
+            else {
+                resolve(products)
+            }
+        }, 2000)
     })
 
     useEffect(() => {
-
-        getProducts
-            .then((res) => {
-                setListProducts(res)
+        getProduct
+            .then((resol) => {
+                setListProducts(resol)
             })
             .catch((error) => {
-                console.log("error");
+                console.log('errro')
             })
             .finally(() => {
-                console.log("listo..");
+                console.log('no seguir');
             })
-
 
     })
 
-
-
-
     return (
         <div className="item-container">
-            <h1 className="titles">{section}</h1>
+            <span className="titulo">{products}</span>
             <ItemList dataProducts={listProducts} />
         </div>
     )
 }
+
 export default ItemListContainer;

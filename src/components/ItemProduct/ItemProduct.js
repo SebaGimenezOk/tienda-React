@@ -1,44 +1,22 @@
-
-import { useState, useEffect } from 'react'
+import React from 'react';
 import './ItemProduct.scss'
+import { Link } from 'react-router-dom';
+import ItemCount from '../ItemCount/ItemCount';
 
 
+const ItemProduct = ({data}) => {
 
-const ItemProduct = ({ data, action }) => {
-
-    
-    const { title, img, price, stock} = data;
-
-    const [contador, setContador] = useState(1)
-
-    const addNumber = () => {
-        setContador(contador + 1)
-    }
-    const removeNumber = () => {
-        setContador(contador - 1)
-    }
-
-    useEffect(() => {
-        console.log("");
-    }, [contador]
-
-    )
-
-
+    const { title, img, price, stock, category,description,id } = data;
     return (
         <div className="Item-Product">
+            <Link to={`/${category}/${id}`}>
             <img className="caja-foto" src={`./assets/${img}`} alt="imagen producto" />
             <p className="P-Products">{title}</p>
             <span className='P-Precios'> ${price} </span>
-            <div className="countProd">
-                <button onClick={removeNumber} >-</button>
-                <p className='P-Precios'>{contador}</p>
-                <button onClick={addNumber}>+</button>
-            </div>
-            <p> en stock: {stock} </p>
-            <button onClick={action}> COMPRAR </button>
+            <p className='P-Texto'>{description}</p>
+           <ItemCount stock={stock}></ItemCount>
+            </Link>
         </div>
-
-    )
-}
+    );
+};
 export default ItemProduct;

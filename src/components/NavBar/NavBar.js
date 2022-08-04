@@ -1,6 +1,7 @@
 
 import './NavBar.scss'
 import CartWidget from '../Button/Button';
+import {Link} from "react-router-dom";
 
 
 
@@ -8,16 +9,14 @@ import CartWidget from '../Button/Button';
 const NavBar = () => {
     return (
         <div className='navbar-primary'>
-            <img className='caja-logo'  src="/assets/favicon-blanco.png" alt="logo pontecle"/>
-            <ul>
-                <li><button> Inicio</button> </li>
-                <li><button> Producto</button> </li>
-                <li><button> Sobre Nos</button> </li>
-                <li><button> Contacto</button> </li>
-            </ul>
+            <Link to="/Home"><img alt="logo pontecle" src="/assets/favicon-blanco.png" className='caja-logo' /></Link>
+            <Link to="/Home" className='iconos-footer'>Home</Link>
+            <Link to="/Products" className='iconos-footer'>Products</Link>
+            <Link to="/Nosotros" className='iconos-footer'>Nosotros</Link>
+            <Link to="/Contact" className='iconos-footer'>Contact</Link>
             <div>
-            <CartWidget />
-             </div>
+                <CartWidget />
+            </div>
         </div>
     )
 }
