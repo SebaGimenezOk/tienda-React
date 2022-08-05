@@ -4,12 +4,11 @@ import Footer from "./components/Footer/Footer";
 import Navegador from "./components/NavBar/NavBar.js"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import * as React from 'react';
-import Home from "./components/pages/Home/Home";
-import Contact from "./components/pages/Contact/Contact";
-import Nosotros from "./components/pages/Nosotros/Nosotros";
-import Products from "./components/pages/Products/Products";
-import Category from "./components/pages/Category/Category";
-
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import Nosotros from "./pages/Nosotros";
+import Products from "./pages/Products";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
 
 function App() {
@@ -18,11 +17,11 @@ function App() {
     <BrowserRouter>
       <Navegador />
       <Routes>
-        <Route path="/" element={<Home />}/>
+        <Route path="/"element={<Home />}/>
         <Route path="/Nosotros" element={<Nosotros/>}/>
         <Route path="/Contact" element={<Contact/>} />
-        <Route path="/Category" element={<Category/>} />
-        <Route path="/:category: id" element={<Products/>}/>
+        <Route path="/Category/:categoryName" element={<Products/>} />
+        <Route path="/Products/:id" element={<ItemDetailContainer/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>

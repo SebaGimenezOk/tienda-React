@@ -5,8 +5,11 @@ import ItemCount from '../ItemCount/ItemCount';
 
 
 const ItemProduct = ({ data }) => {
-
     const { title, img, price, stock, category, description, id } = data;
+    const onAdd = (contador) => {
+        alert("agrega: " + contador + " en tu carrito");
+    }
+
     return (
         <div className="Item-Product">
             <Link to={`/${category}/${id}`}>
@@ -14,7 +17,7 @@ const ItemProduct = ({ data }) => {
                 <p className="P-Products">{title}</p>
                 <span className='P-Precios'> ${price} </span>
                 <p className='P-Texto'>{description}</p>
-                <ItemCount stock={stock}></ItemCount>
+                <ItemCount stock={stock} initial={0} onAdd={onAdd}></ItemCount>
             </Link>
         </div>
     );

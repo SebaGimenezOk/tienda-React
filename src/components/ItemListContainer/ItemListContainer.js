@@ -2,19 +2,20 @@ import './ItemListContainer.scss'
 import { useEffect, useState } from 'react'
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
+import products from "../utils/products.mock"
 
 
-const ItemListContainer = ({ products }) => {
+const ItemListContainer = ({ section }) => {
 
     const [listProducts, setListProducts] = useState([])
-    const { Category } = useParams();
-    const filterCategory = products.filter((products) => products.Category === Category)
+    const { categoryName } = useParams();
+    const filterCategory = products.filter((products) => products.category === categoryName)
 
 
 
-    const getProduct = new Promise((resolve, reject) => {
+    const getProducts = () => new Promise((resolve, reject) => {
         setTimeout(() => {
-            if (Category === "duros" || Category === "blandos" || Category === "estacionados") {
+            if (categoryName === "Duros" || categoryName === "Blandos" || categoryName === "Estacionados") {
                 resolve(filterCategory)
             }
             else {
@@ -22,27 +23,26 @@ const ItemListContainer = ({ products }) => {
             }
         }, 2000)
     })
-
     useEffect(() => {
-        getProduct
-            .then((resol) => {
-                setListProducts(resol)
-            })
-            .catch((error) => {
-                console.log('errro')
-            })
-            .finally(() => {
-                console.log('no seguir');
-            })
+        const getProduct = async () => {
+            try{
+                const responseLog = await getProducts()
+                setListProducts(responseLog)
 
-    })
 
-    return (
-        <div className="item-container">
-            <span className="titulo">{products}</span>
-            <ItemList dataProducts={listProducts} />
-        </div>
-    )
+            }
+
+            catch(error){ console.log(error) }
+        }
+        getProduct()
+    }, )
+
+return (
+    <div className="item-container">
+        <span className="titulo">{products}</span>
+        <ItemList dataProducts={listProducts} />
+    </div>
+)
+
 }
-
 export default ItemListContainer;

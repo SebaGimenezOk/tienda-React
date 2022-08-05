@@ -1,4 +1,4 @@
-import ItemDetailContainer from "../../ItemDetailContainer/ItemDetailContainer.js"
+import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer.js"
 
 const Product=()=>{
     return(
