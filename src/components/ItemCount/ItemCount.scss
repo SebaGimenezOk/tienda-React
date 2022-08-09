@@ -1,29 +1,16 @@
 
-.button {
-    background-color: rgba(0, 255, 255, 0);
-    border: none;
-    font-weight: 500;
-    margin-top: 19px;
-    color: rgb(255, 195, 29);
-    font-size: 26px;
-}
-
-.P-Precios {
-    color: aliceblue;
-    font-weight: 500;
-    font-size: 31px;
-
-}
-
-.countProd {
+.count-prod {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
 }
 
-.countProd button {
+.count-prod p {
+    font-size: 30px;
+}
+
+.count-prod button {
+    font-size: 40px;
     padding: 20px;
-    font-size: 31px;
-    margin: 10px;
 }

@@ -1,25 +1,21 @@
-import React from 'react';
-import './ItemProduct.scss'
-import { Link } from 'react-router-dom';
-import ItemCount from '../ItemCount/ItemCount';
+import ItemCount from "../ItemCount/ItemCount";
+import "./ItemProduct.scss"
+
 
 
 const ItemProduct = ({ data }) => {
-    const { title, img, price, stock, category, description, id } = data;
-    const onAdd = (contador) => {
-        alert("agrega: " + contador + " en tu carrito");
-    }
 
+    const {title, price, img, stock}= data;
     return (
-        <div className="Item-Product">
-            <Link to={`/${category}/${id}`}>
-                <img className="caja-foto" src={`./assets/${img}`} alt="imagen producto" />
-                <p className="P-Products">{title}</p>
-                <span className='P-Precios'> ${price} </span>
-                <p className='P-Texto'>{description}</p>
-                <ItemCount stock={stock} initial={0} onAdd={onAdd}></ItemCount>
-            </Link>
+        <div className="item-product">
+            <img className="caja-foto" src={`/assets/${img}`} alt="Imagen producto" />
+            <div className="titulosybotones">
+                <p>{title}</p>
+                <span>${price}</span>
+                <p>stock:  {stock}</p>
+                <ItemCount />
+            </div>
         </div>
-    );
-};
+    )
+}
 export default ItemProduct;

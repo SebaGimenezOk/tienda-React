@@ -1,39 +1,23 @@
-.navbar-primary {
-    width: 100%;
-    background-color: rgb(27, 26, 26);
+
+.nav-estilo{
     display: flex;
-    padding: 5px 60px;
-    align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+    border-color: aliceblue;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid; 
+
+}
+button{
     list-style: none;
-    gap: 1.6rem;
-}
-
-.cart-widget {
-    display: flex;
-    align-items: center;
-}
-
-.caja-foto {
-    width: 60%;
-    height: 60%;
-    object-fit: cover;
-}
-
-.iconos-footer  {
-    list-style: none !important;
-    color: #ece8e8 !important;
-    text-decoration: none !important;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    background-color: rgba(27, 26, 26, 0.685);
-    padding: 1rem;
+    text-decoration: none;
     text-transform: uppercase;
-    
+    background-color: rgba(0, 0, 0, 0);
+    color: aliceblue;
+    border: none;
+    font-size: 19px;
 }
-.lista-categoria{
-    display: flex;
-    justify-content: center;
-}
+
+

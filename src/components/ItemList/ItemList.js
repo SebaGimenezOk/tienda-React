@@ -1,15 +1,11 @@
-import ItemProduct from '../ItemProduct/ItemProduct';
+import ItemProduct from "../ItemProduct/ItemProduct"
 
-const ItemList = ({ dataProducts }) => {
-    return (
+const ItemList = ({dataProducts}) => {
+    return(
         <>
-            {
-                dataProducts.map((products) => {
-                    return <ItemProduct
-                        key={products.id}
-                        datos={products} />
-                })
-            }
+            {dataProducts.map( (product) => {    
+                return <ItemProduct key={product.id} data={product}/>
+            })}
         </>
     )
 }

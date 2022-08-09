@@ -1,24 +1,25 @@
-import Nav from 'react-bootstrap/Nav';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+
 import './Footer.scss';
 
 
 
 function Footer() {
     return (
-        <Nav className="footer"  activeKey="/Home" fixed="bottom">
-            <ButtonGroup vertical>
-                <DropdownButton as={ButtonGroup} title="PonteClé Social Media" id="bg-vertical-dropdown-1">
-                    <Dropdown.Item className='iconos-footer' eventKey="1">Facebook</Dropdown.Item>
-                    <Dropdown.Item className='iconos-footer' eventKey="2">Twitter</Dropdown.Item>
-                    <Dropdown.Item className='iconos-footer' eventKey="3">Instagram</Dropdown.Item>
-                    <Dropdown.Item className='iconos-footer' eventKey="4">Youtube</Dropdown.Item>
-                    <Dropdown.Item className='iconos-footer' eventKey="5">Telegram</Dropdown.Item>
-                </DropdownButton>
-            </ButtonGroup>
-        </Nav>
+        <div className="footer" activeKey="/Home" fixed="to">
+            <div>
+                <h2 className='titulo-footer'>PonteClé Social Media</h2>
+            </div>
+            <div className='iconos-footer'>
+                <button className="iconos-footer" >facebook</button>
+                <button className="iconos-footer" >twitter</button>
+                <button className="iconos-footer" >instagram</button>
+                <button className="iconos-footer" >youtube</button>
+                <button className="iconos-footer" >telegram</button>
+            </div>
+            <div className='iconos-footer'>
+                <img src="/assets/favicon-blanco.png" alt="logo" />
+            </div>
+        </div>
     );
 }
 
