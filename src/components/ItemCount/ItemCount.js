@@ -1,25 +1,31 @@
 import { useState } from "react"
 import "./ItemCount.scss"
 
-const ItemCount = () => {
-    const [contador, setContador] = useState(0)
+const ItemCount = ({ setQuantitySelected }) => {
 
-    const addNumber = () => {
-        setContador(contador + 1)
+    const [countQuantity, setCountQuantity] = useState(0)
+
+    const addQuantity = () => {
+        setCountQuantity(countQuantity + 1)
     }
 
-    const removeNumber = () => {
-        setContador(contador - 1)
+    const removeQuantity = () => {
+        setCountQuantity(countQuantity - 1)
     }
+    const onAdd = () => {
+        setQuantitySelected(countQuantity)
+    }
+
+
 
     return (
         <>
             <div className="count-prod">
-                <button onClick={removeNumber} > - </button>
-                <p>{contador}</p>
-                <button onClick={addNumber}> +</button>
+                <button onClick={removeQuantity} > - </button>
+                <span>{countQuantity}</span>
+                <button onClick={addQuantity}> +</button>
             </div>
-            <button className="titulosybotones2"> Comprar</button>
+            <button className="titulosybotones3" onClick={onAdd}> Agregar al Carrito</button>
         </>
     )
 
