@@ -1,6 +1,6 @@
 
 .item-product {
-    width: 30%;
+    width: 70%;
     border-width: 1.4px;
     border-style: solid;
     border-color: rgb(248, 79, 79);
@@ -13,6 +13,8 @@
     text-transform: uppercase;
     color: aliceblue;
     padding: 1rem;
+    margin: 1rem;
+
 }
 
 .caja-foto {
@@ -66,6 +68,17 @@
     font-size: 10px;
     font-weight: 100;
     display: flex;
+}
 
-
+button{
+    text-decoration: none;
+    list-style: none;
+}
+li{
+    text-decoration: none;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    list-style: none;
 }

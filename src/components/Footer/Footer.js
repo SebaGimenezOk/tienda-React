@@ -1,6 +1,6 @@
 
 import './Footer.scss';
-
+import {Link}from 'react-router-dom'
 
 
 function Footer() {
@@ -10,14 +10,14 @@ function Footer() {
                 <h2 className='titulo-footer'>PonteClé Social Media</h2>
             </div>
             <div className='iconos-footer'>
-                <button className="iconos-footer" >facebook</button>
-                <button className="iconos-footer" >twitter</button>
-                <button className="iconos-footer" >instagram</button>
-                <button className="iconos-footer" >youtube</button>
-                <button className="iconos-footer" >telegram</button>
+                <a href='https://www.facebook.com/' target="_blank" rel='noreferrer' >  <button className="iconos-footer" >facebook</button></a>
+                <a href='https://www.twitter.com/' target="_blank"rel='noreferrer'  >  <button className="iconos-footer" >twitter</button></a>
+                <a href='https://www.instagram.com/' target="_blank"rel='noreferrer'  >  <button className="iconos-footer" >instagram</button></a>
+                <a href='https://www.youtube.com/' target="_blank" rel='noreferrer' > <button className="iconos-footer" >youtube</button></a>
+                <a href='https://www.telegram.com/' target="_blank"rel='noreferrer'  > <button className="iconos-footer" >telegram</button></a>
             </div>
             <div className='iconos-footer'>
-                <img src="/assets/favicon-blanco.png" alt="logo" />
+                <Link to='/'><img src="/assets/favicon-blanco.png" alt="logo" /></Link>
             </div>
         </div>
     );

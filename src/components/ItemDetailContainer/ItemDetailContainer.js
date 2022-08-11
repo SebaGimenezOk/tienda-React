@@ -1,13 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-
-
+import "./ItemDetailContainer.scss"
+import "../ItemDetail/ItemDetail.scss"
 import products from "../../utils/articulo.mock"
 import { useState, useEffect } from "react"
 import ItemList from "../ItemList/Itemlist"
 
 
 
-const ItemListContainer = ({ section }) => {
+const ItemDetailContainer = ({ section }) => {
 
 
     const [listProducts, setListProducts] = useState([]);
@@ -15,7 +15,7 @@ const ItemListContainer = ({ section }) => {
     const getProducts = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(products)
-        }, 2000)
+        }, )
 
     })
 
@@ -29,15 +29,12 @@ const ItemListContainer = ({ section }) => {
             })
 
     }, [])
-
-
-
-
+    
     return (
-        <div>
-            <h2>{section}</h2>
+        <div className="list-products">
+            <h2>promociones</h2>
             <ItemList dataProducts={listProducts} />
         </div>
     )
 }
-export default ItemListContainer;
+export default ItemDetailContainer;

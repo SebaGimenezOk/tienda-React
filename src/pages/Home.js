@@ -1,17 +1,13 @@
 
-
-import { Link } from "react-router-dom";
-
+import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
+import "../App.scss"
+import "../components/ItemListContainer/ItemListContainer.scss"
 
 const Home = () => {
   return (
-    <div className="container">
-      <ul>
-        <li><Link to="/category/Duros">Duros</Link></li>
-        <li><Link to="/category/Blandos">Blandos</Link></li>
-        <li><Link to="/category/Estacionados">estacionados</Link></li>
-      </ul>
-    </div>
+    <div className="main-container">
+    <ItemListContainer />
+  </div>
   )
 }
 export default Home;

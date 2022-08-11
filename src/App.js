@@ -2,20 +2,28 @@
 import "./App.scss";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
-// import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import Products from "./pages/Products";
+import Nosotros from "./pages/Nosotros";
+import Detail from "./pages/Detail";
 
 function App() {
 
   return (
-    <div>
-      <NavBar />
-      <div className="main-container">
-        <ItemDetailContainer />
-      </div>
-      <Footer />
-    </div>
+    <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={ <Home/> } />
+          <Route path="/Contact" element={<Contact/>} />
+          <Route path="/Products" element={<Products/>} />
+          <Route path="/Products/:id" element={<Detail/>} />
+          <Route path="/Nosotros" element={<Nosotros/>} />
+          <Route path="*"element={<h1>Error 404 - Página no encontrada.</h1>}/>
+        </Routes>
+        <Footer />
+    </BrowserRouter>
   );
 }
 
