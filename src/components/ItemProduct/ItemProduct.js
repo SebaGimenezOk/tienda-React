@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const ItemProduct = ({ data }) => {
 
-    const {title, price, img, stock, id}= data;
+    const {title, price, img, stock, id, description}= data;
     return (
         <Link to={`/Products/${id}`}> 
         <div className="item-product">
@@ -14,6 +14,7 @@ const ItemProduct = ({ data }) => {
                 <p>{title}</p>
                 <span>${price}</span>
                 <p>stock:  {stock}</p>
+                <p className="descript"> description: {description}</p>
                 <ItemCount />
             </div>
         </div>

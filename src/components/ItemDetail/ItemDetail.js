@@ -4,11 +4,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const ItemDetail = ({ data }) => {
+   
     const [quantitySelected, setQuantitySelected] = useState(1)
-
     const { title, price, img, stock, description,id } = data;
-
-
 
 
     return (
@@ -21,7 +19,6 @@ const ItemDetail = ({ data }) => {
                 <p className="stock">stock: {stock} unidades.</p>
                 <p className="descript"> description:   {description}</p>
             </div>
-            {console.log("quantitySelected: ", quantitySelected)}
             {quantitySelected > 1 ? <button> terminar compra</button> : <ItemCount setQuantitySelected={setQuantitySelected} />}
         </div>
         </Link>

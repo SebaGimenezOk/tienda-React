@@ -1,10 +1,23 @@
 
-import ItemDetail from "../ItemDetail/ItemDetail"
-const ItemList = ({dataProducts}) => {
-    return(
+// import ItemDetail from "../ItemDetail/ItemDetail"
+import ItemProduct from "../ItemProduct/ItemProduct";
+import { useContext } from "react";
+import { CartContext } from "../CartContext/CartContext";
+
+
+
+const ItemList = ({ dataProducts }) => {
+    const { name, setName, handleClick } = useContext(CartContext)
+    console.log("imfo del constext: ", name);
+    return (
         <>
-            {dataProducts.map( (product) => {    
-                return <ItemDetail key={product.id} data={product}/>
+            <button onClick={handleClick}> click</button>
+            {dataProducts.map((product) => {
+                return (
+                    <>
+                        <ItemProduct key={product.id} data={product} />
+                    </>
+                )
             })}
         </>
     )
