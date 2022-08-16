@@ -9,6 +9,7 @@ const NavBar = () => {
             <Link to='/'><button><img src="/assets/favicon-blanco.png" alt="logo" /></button></Link>
             <Link to='/'><button>Home</button></Link>
             <Link to='/Products'><button>products</button></Link>
+            <Link to='/Products/:id'><button>detail</button></Link>
             <Link to='/Nosotros'><button>Nosotros</button></Link>
             <Link to='/Contact'><button>Contact</button></Link>
             <button> <CartWidget /></button>

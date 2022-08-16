@@ -8,29 +8,26 @@ import Contact from "./pages/Contact";
 import Products from "./pages/Products";
 import Nosotros from "./pages/Nosotros";
 import Detail from "./pages/Detail";
-import CartProvider from "./components/CartContext/CartContext";
-
-
 
 
 
 function App() {
 
   return (
-    <CartProvider> 
-    <BrowserRouter>
+
+
+      <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path="/" element={ <Home/> } />
-          <Route path="/Contact" element={<Contact/>} />
-          <Route path="/Products" element={<Products/>} />
-          <Route path="/Products/:id" element={<Detail/>} />
-          <Route path="/Nosotros" element={<Nosotros/>} />
-          <Route path="*"element={<h1>Error 404 - Página no encontrada.</h1>}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/Products" element={<Products />} />
+          <Route path="/Products/:id" element={<Detail />} />
+          <Route path="/Nosotros" element={<Nosotros />} />
+          <Route path="*" element={<h1 className="titulos-detail">Error 404 - Página no encontrada.</h1>} />
         </Routes>
         <Footer />
-    </BrowserRouter>
-    </CartProvider>
+      </BrowserRouter>
   );
 }
 

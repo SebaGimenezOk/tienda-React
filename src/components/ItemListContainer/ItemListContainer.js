@@ -8,13 +8,12 @@ import ItemList from "../ItemList/Itemlist"
 
 const ItemListContainer = ({ section }) => {
 
-
     const [listProducts, setListProducts] = useState([]);
 
-    const getProducts = new Promise((resolve,reject) => {
+    const getProducts = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(products)
-        },)
+        })
 
     })
 
@@ -26,9 +25,8 @@ const ItemListContainer = ({ section }) => {
             .catch((error) => {
                 console.log("error")
             })
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[])
+    }, [])
 
 
 

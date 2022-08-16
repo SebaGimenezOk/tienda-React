@@ -1,5 +1,5 @@
 
-// import ItemDetail from "../ItemDetail/ItemDetail"
+
 import ItemProduct from "../ItemProduct/ItemProduct";
 import { useContext } from "react";
 import { CartContext } from "../CartContext/CartContext";
@@ -7,8 +7,8 @@ import { CartContext } from "../CartContext/CartContext";
 
 
 const ItemList = ({ dataProducts }) => {
-    const { name, setName, handleClick } = useContext(CartContext)
-    console.log("imfo del constext: ", name);
+    const { handleClick } = useContext(CartContext)
+    // console.log("imfo del constext: ", name);
     return (
         <>
             <button onClick={handleClick}> click</button>
