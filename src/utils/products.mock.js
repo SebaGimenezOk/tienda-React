@@ -1,7 +1,7 @@
 
 const products = [
 {
-    id:"1",
+    id:1,
     title: "holanda",
     price: 1700,
     img:'holanda.png',
@@ -11,7 +11,7 @@ const products = [
 
 },
 {
-    id:"2",
+    id:2,
     title: "cremoso",
     price: 1400,
     img:'cremosoComun.png',
@@ -21,7 +21,7 @@ const products = [
 
 },
 {
-    id:"3",
+    id:3,
     title: "reggiano",
     price: 2100,
     img:'reggiano.png',
@@ -31,7 +31,7 @@ const products = [
 
 },
 {
-    id:"4",
+    id:4,
     title: "sardo",
     price: 1900,
     img:'sardo.png',

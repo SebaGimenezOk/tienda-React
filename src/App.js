@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import Products from "./pages/Products";
 import Nosotros from "./pages/Nosotros";
 import Detail from "./pages/Detail";
+import CartProvider from "./components/CartContext/CartContext";
 
 
 
@@ -15,7 +16,7 @@ function App() {
 
   return (
 
-
+      <CartProvider>
       <BrowserRouter>
         <NavBar />
         <Routes>
@@ -28,6 +29,7 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
+      </CartProvider>
   );
 }
 
