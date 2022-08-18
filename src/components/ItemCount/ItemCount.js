@@ -1,9 +1,9 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import "./ItemCount.scss"
+import React from "react"
+const ItemCount = ({ initial, stock, onAdd }) => {
 
-const ItemCount = ({ setQuantitySelected }) => {
-
-    const [countQuantity, setCountQuantity] = useState(0)
+    const [countQuantity, setCountQuantity] = useState(parseInt(initial))
 
     const addQuantity = () => {
         setCountQuantity(countQuantity + 1)
@@ -12,20 +12,20 @@ const ItemCount = ({ setQuantitySelected }) => {
     const removeQuantity = () => {
         setCountQuantity(countQuantity - 1)
     }
-    const onAdd = () => {
-        setQuantitySelected(countQuantity)
-    }
-
-
+useEffect(()=>{
+    setCountQuantity(parseInt(initial));
+}, [initial])
 
     return (
         <>
-            <div className="count-prod">
-                <button onClick={removeQuantity} > - </button>
-                <span>{countQuantity}</span>
-                <button onClick={addQuantity}> +</button>
+            <div className="item-carro">
+                <div className="item-number">
+                    <button disabled={countQuantity <= 1} onClick={removeQuantity} > - </button>
+                    <span>{countQuantity}</span>
+                    <button disabled={countQuantity >= stock} onClick={addQuantity}> +</button>
+                </div>
+                <button disabled={stock <= 0} onClick={() => onAdd(countQuantity)}> Agregar al Carrito</button>
             </div>
-            <button className="titulosybotones3" onClick={onAdd}> Agregar al Carrito</button>
         </>
     )
 

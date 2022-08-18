@@ -4,7 +4,7 @@ import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailCon
 const Detail=()=>{
     return(
         <div className="main-container">
-        <ItemDetailContainer />
+        <ItemDetailContainer/>
       </div>
     )
  

@@ -8,14 +8,14 @@ import { CartContext } from "../CartContext/CartContext";
 
 const ItemList = ({ dataProducts }) => {
     const { handleClick } = useContext(CartContext)
-    // console.log("imfo del constext: ", name);
+    
     return (
         <>
             <button onClick={handleClick}> click</button>
-            {dataProducts.map((product) => {
+            {dataProducts.map((products) => {
                 return (
                     <>
-                        <ItemProduct key={product.id} data={product} />
+                        <ItemProduct key={products.id} data={products} />
                     </>
                 )
             })}

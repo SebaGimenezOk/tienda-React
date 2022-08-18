@@ -2,7 +2,7 @@ import './Item.scss'
 
 
 const Item = ({ data }) => {
-    const { title, stock, img, price, description } = data
+    
 
     return (
         <div className="item-product">

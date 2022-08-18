@@ -4,29 +4,25 @@ import ItemDetail from "../ItemDetail/ItemDetail.js"
 import { useEffect, useState } from "react";
 import products from "../../utils/products.mock.js"
 import './ItemDetailContainer.scss'
-import { useParams } from "react-router-dom"
 
 const ItemDetailContainer = () => {
-    const [productDataDetail, setproductDataDetail]= useState({})
-    const { id } = useParams()
+    const [detail,setDataDetail]=useState([])
 
-    useEffect(() => {
-        filterById()
-    },)
-  const filterById = () => {
-
-        products.some((product) => {
-            if (product.id === id) {
-                console.log("filtrado en numero: ", product)
-                setproductDataDetail(product)
-            }
-        })
-    }
-
+     const getProducts=new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(products[0])
+        }, 1000);
+     })
+     useEffect(()=>{
+        getProducts
+        .then((res)=>{setDataDetail(res)})
+        .catch((error)=>{
+            console.log("error")})
+     },[])
     return (
         <div className="list-products">
             <h2 className="titulodeseccion">Producto Seleccionado</h2>
-            <ItemDetail data={productDataDetail}/>
+            <ItemDetail data={detail}/>
         </div>
     )
 }
