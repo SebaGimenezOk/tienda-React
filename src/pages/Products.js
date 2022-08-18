@@ -6,7 +6,7 @@ import "../components/ItemDetailContainer/ItemDetailContainer.scss"
 const Products = () => {
     return (
       <div className="main-container">
-      <ItemDetailContainer />
+      <ItemDetailContainer  />
     </div>
     )
 }

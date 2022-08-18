@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
 
      const getProducts=new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(products[0])
+            resolve(products)
         }, 1000);
      })
      useEffect(()=>{
@@ -18,7 +18,7 @@ const ItemDetailContainer = () => {
         .then((res)=>{setDataDetail(res)})
         .catch((error)=>{
             console.log("error")})
-     },[])
+     },)
     return (
         <div className="list-products">
             <h2 className="titulodeseccion">Producto Seleccionado</h2>

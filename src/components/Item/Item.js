@@ -3,7 +3,7 @@ import './Item.scss'
 
 const Item = ({ data }) => {
     
-
+    const {title, price, img, stock, description}= data;
     return (
         <div className="item-product">
             <img className='caja-foto' src={`/assets/${img}`} alt="img prod" />

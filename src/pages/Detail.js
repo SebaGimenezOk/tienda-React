@@ -7,8 +7,5 @@ const Detail=()=>{
         <ItemDetailContainer/>
       </div>
     )
- 
-    
-
 }
 export default Detail;

@@ -23,7 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Products" element={<Products />} />
-          <Route path="/Products/:id" element={<Detail />} />
+          <Route path="/Products/:id" element={<Detail/>} />
           <Route path="/Nosotros" element={<Nosotros />} />
           <Route path="*" element={<h1 className="titulos-detail">Error 404 - Página no encontrada.</h1>} />
         </Routes>
