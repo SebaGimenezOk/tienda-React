@@ -4,25 +4,30 @@ import ItemDetail from "../ItemDetail/ItemDetail.js"
 import { useEffect, useState } from "react";
 import products from "../../utils/products.mock.js"
 import './ItemDetailContainer.scss'
+import { useParams } from "react-router-dom";
+
+
 
 const ItemDetailContainer = () => {
-    const [detail,setDataDetail]=useState([])
+    const [detalle, setDetalle] = useState({})
+    const { productodId } = useParams()
 
-     const getProducts=new Promise((resolve, reject) => {
-        setTimeout(() => {
+    useEffect(() => {
+
+        const getDetalle = new Promise(resolve => {
             resolve(products)
-        }, 1000);
-     })
-     useEffect(()=>{
-        getProducts
-        .then((res)=>{setDataDetail(res)})
-        .catch((error)=>{
-            console.log("error")})
-     },)
+        })
+
+        getDetalle.then(res => setDetalle(res.find(producto => producto.id === parseInt(productodId))))
+
+
+    },)
+
+
     return (
         <div className="list-products">
             <h2 className="titulodeseccion">Producto Seleccionado</h2>
-            <ItemDetail data={detail}/>
+            <ItemDetail infodetalle={detalle} />
         </div>
     )
 }

@@ -1,28 +1,24 @@
 
 import "./ItemDetail.scss"
-// import ItemCount from "../ItemCount/ItemCount";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
-const ItemDetail = ({data}) => {
-    const {title, price, img, stock, description}= data;
+const ItemDetail = ({infodetalle}) => {
     
-    // const onAdd = (countQuantity) => {
-    //     console.log(`compraste${countQuantity}units`);
-    // }
+    const {title, price, img, stock, id, description}= infodetalle
+    
     return (
-       <Link>
-        <div className="item-product">
-            <img className='caja-foto' src={`/assets/${img}`} alt="img prod" />
+        
+        <Link to={`/Products/${id}`}> 
+        <div className="tarjetaProducto">
+            <img className="caja-foto" src={`/assets/${img}`} alt="Imagen producto" />
             <div className="titulosybotones">
-                <p className='titulosybotones' >{title} </p>
-                <p className='titulosybotones2'>$: {price}</p>
-                <p className='titulosybotones'>Stock:{stock} </p>
-                <p className='descript' >description:  {description} </p>
-                {/* <ItemCount initial={0} stock={20} onAdd={onAdd} /> */}
+                <p>{title}</p>
+                <span>${price}</span>
+                <p>stock:{stock}</p>
+                <p> description:{description}</p>
             </div>
         </div>
-       
-       </Link>
+        </Link>
     )
 }
 export default ItemDetail;

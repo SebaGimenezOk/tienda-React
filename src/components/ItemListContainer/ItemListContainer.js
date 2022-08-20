@@ -2,19 +2,18 @@
 import "./ItemListContainer.scss"
 import products from "../../utils/products.mock"
 import { useState, useEffect } from "react"
-import ItemProduct from "../ItemProduct/ItemProduct"
+import ItemList from "../ItemList/Itemlist"
 
 
-const ItemListContainer = ({ section }) => {
+const ItemListContainer = () => {
 
     const [lista, newLista] = useState([])
 
     useEffect(() => {
 
-        const getProducts = new Promise((resolve, reject) => {
+        const getProducts = new Promise(resolve => {
             resolve(products)
         })
-
         getProducts
             .then((res) => {
                 newLista(res)
@@ -24,11 +23,10 @@ const ItemListContainer = ({ section }) => {
             })
     }, [])
 
-
     return (
-        <div className="main-container">
-            <h2>{section}</h2>
-            {lista.map((producto) => { return <ItemProduct data={lista} /> })}
+        <div className="lista-home">
+            <h1 className="titulosybotones">lista productos</h1>
+            <ItemList infoproductos={lista} />
         </div>
     )
 }
