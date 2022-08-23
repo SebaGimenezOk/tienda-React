@@ -7,7 +7,7 @@ function Footer() {
     return (
         <div className="footer" activeKey="/Home" fixed="to">
             <div>
-                <h2 className='titulo-footer'>PonteClé Social Media</h2>
+                <h2 className='titulo-footer'>PonteCle Social Media</h2>
             </div>
             <div className='iconos-footer'>
                 <a href='https://www.facebook.com/' target="_blank" rel='noreferrer' >  <button className="iconos-footer" >facebook</button></a>

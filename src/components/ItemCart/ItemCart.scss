@@ -1,0 +1,40 @@
+.itemCart{
+
+    max-width: 800px;
+    margin:2rem auto;
+    padding: 1rem;
+    color: aliceblue;
+    font-weight: 100;
+    font-size: 23px;
+    
+
+
+}
+
+.itemCart img{
+    width: 200px;
+    margin-right: 1rem;
+}
+.tituloEliminar {
+    color: rgb(228, 95, 18);
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+}
+
+.tituloAgrega{
+    color: rgb(230, 222, 217);
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}

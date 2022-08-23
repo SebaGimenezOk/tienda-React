@@ -1,0 +1,16 @@
+.cart-view{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    width: 50%;
+    border-width: 1.4px;
+    border-style: solid;
+    border-color: rgb(248, 79, 79);
+    border-radius: 23px;
+    color: aliceblue;
+    padding: 1rem;
+    margin-left: 25%;
+}

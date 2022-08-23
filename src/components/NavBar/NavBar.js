@@ -1,17 +1,18 @@
 import './NavBar.scss'
 import CartWidget from '../CartWidget/CartWidget';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const NavBar = () => {
     return (
         <div className="nav-estilo">
-            <NavLink to='/'><button><img src="/assets/favicon-blanco.png" alt="logo" /></button></NavLink>
-            <NavLink to='/'><button>Home</button></NavLink>
-            <NavLink to='/Products'><button>products</button></NavLink>
-            <NavLink to='/Nosotros'><button>Nosotros</button></NavLink>
-            <NavLink to='/Contact'><button>Contact</button></NavLink>
-            <button> <CartWidget /></button>
+            <Link to='/'><button><img src="/assets/favicon-blanco.png" alt="logo" /></button></Link>
+            <Link to='/'><button>Home</button></Link>
+            <Link to='/Products'><button>products</button></Link>
+            <Link to='/Nosotros'><button>Nosotros</button></Link>
+            <Link to='/Contact'><button>Contact</button></Link>
+            <Link to='/Cart'> <button> <CartWidget /></button></Link>
+
         </div>
     )
 }

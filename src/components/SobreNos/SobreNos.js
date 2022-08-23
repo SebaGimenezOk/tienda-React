@@ -1,9 +1,11 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-
+import "../SobreNos/SobreNos.scss"
 function SobreNos() {
     return (
-        <Form>
+        <Form className='baseFormulario'>
+             <h3 className='tituloFormu'>Conectate con nostoros</h3>
+
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label></Form.Label>
                 <Form.Control type="email" placeholder="Enter email" />

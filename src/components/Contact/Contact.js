@@ -1,9 +1,11 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import "../Contact/Contact.scss"
 
 function Formulario() {
     return (
-        <Form>
+        <Form className='baseFormulario'>
+        <h3 className='tituloFormu'>Conectate con nostoros</h3>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" />

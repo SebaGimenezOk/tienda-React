@@ -1,24 +1,25 @@
 
 import React from "react";
 import { useCartContext } from "../../components/CartContext/CartContext"
-const CartView = ({ product }) => {
+import './CartView.scss'
+
+
+const CartView = ({ producto }) => {
+
     const { removeProduct } = useCartContext()
+    const { title, img, price, quantity, id } = producto
+
+    
     return (
         <div className="cart-view">
-            <img src={product.img} alt={product.title} />
+            <img src={img} alt={title} />
             <div>
-                <p>producto:{product.title}</p>
-                <p>cantidad:{product.quantity}</p>
-                <p>price:{product.price}</p>
-                <p>subTotal:{product.quantity * product.price}</p>
-                <button onClick={() => removeProduct(product.id)}>Eliminar </button>
-
-
-
+                <p>producto:{title}</p>
+                <p>cantidad:{quantity}</p>
+                <p>price:{price}</p>
+                <p>subTotal:{quantity * price}</p>
+                <button onClick={() => removeProduct(id)}>Eliminar </button>
             </div>
-
-
-
         </div>
     )
 }
