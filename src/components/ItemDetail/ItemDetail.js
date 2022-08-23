@@ -2,17 +2,17 @@ import ItemCount from "../ItemCount/ItemCount"
 import { useState } from "react"
 import "./ItemDetail.scss"
 import { Link } from "react-router-dom"
-import {useCartContext} from "../../Context/CartContext"
+import { useCartContext } from "../../Context/CartContext"
 
 const ItemDetail = ({ infodetalle }) => {
 
     const [goToCart, setGoToCart] = useState(false)
-     
-    const{addProducto}= useCartContext()
-     
-    const onAdd = (quantity) => {    
-                setGoToCart(true)
-                addProducto(infodetalle,quantity)
+
+    const { addProducto } = useCartContext()
+
+    const onAdd = (quantity) => {
+        setGoToCart(true)
+        addProducto(infodetalle, quantity)
     }
     const { title, price, img, stock, id, description } = infodetalle
 
