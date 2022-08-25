@@ -5,7 +5,7 @@ import {Link}from 'react-router-dom'
 
 function Footer() {
     return (
-        <div className="footer" activeKey="/Home" fixed="to">
+        <div className="footer">
             <div>
                 <h2 className='titulo-footer'>PonteCle Social Media</h2>
             </div>

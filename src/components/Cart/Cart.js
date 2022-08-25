@@ -43,11 +43,8 @@ const Cart = () => {
                 carroProd.map(producto => <ItemCart key={producto.id} producto={producto} />)
             }
             </div>
-            <p>
                 <p className="tituloDetalle">total: $ {precioTotal()}</p>
                 <button className="tituloLink" onClick={handleClick}>Pagar</button>
-            </p>
-
         </>
     )
 
