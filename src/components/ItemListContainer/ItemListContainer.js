@@ -3,21 +3,31 @@ import "./ItemListContainer.scss"
 // import products from "../../utils/products.mock"
 import { useState, useEffect } from "react"
 import ItemList from "../ItemList/Itemlist"
-import { getFirestore, collection, getDocs } from "firebase/firestore"
-
+import { getFirestore, collection, getDocs, query, where } from "firebase/firestore"
+import { useParams } from "react-router-dom"
 
 const ItemListContainer = () => {
 
     const [lista, newLista] = useState([])
-
+    const { productoId } = useParams()
     useEffect(() => {
 
         const querydb = getFirestore()
         const queryCollection = collection(querydb, 'Productos')
-
-        getDocs(queryCollection)
-            .then(res => res.docs.map(Producto => ({ id: Producto.id, ...Producto.data() })))
-
+       
+  
+        if(productoId){
+            const queryFiltro = query(queryCollection, where('category','==','productoId'))
+             getDocs(queryFiltro)
+            .then(res => newLista(res.docs.map(product => ({ id: product.id, ...product.data() }))))
+            
+        }     else{
+            getDocs(queryCollection)
+            .then(res => newLista(res.docs.map(product => ({ id: product.id, ...product.data() }))))
+            
+        } 
+        
+       
 
         // const getProducts = new Promise(resolve => {
         //     resolve(products)
@@ -29,7 +39,7 @@ const ItemListContainer = () => {
         //     .catch((error) => {
         //         console.log("error")
         //     })
-    }, [])
+    }, [productoId])
 
     return (
         <div className="lista-home">

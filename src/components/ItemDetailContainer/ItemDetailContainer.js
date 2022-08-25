@@ -4,14 +4,14 @@ import ItemDetail from "../ItemDetail/ItemDetail.js"
 import { useEffect, useState } from "react";
 // import products from "../../utils/products.mock.js"
 import './ItemDetailContainer.scss'
-// import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import { getFirestore, doc, getDoc } from 'firebase/firestore'
 
 
 const ItemDetailContainer = () => {
     const [detalle, setDetalle] = useState({})
-    // const { productoId } = useParams()
+    const { productoId } = useParams()
 
     // useEffect(() => {
     //     const getDetalle = new Promise(resolve => {
@@ -23,10 +23,10 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
         const querydb = getFirestore()
-        const queryDoc = doc(querydb, 'Productos', '1')
+        const queryDoc = doc(querydb, 'Productos', productoId)
         getDoc(queryDoc)
             .then(res => setDetalle({ id: res.id, ...res.data() }))
-    },[])
+    },[productoId])
 
     return (
         <div className="list-products">
