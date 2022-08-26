@@ -1,5 +1,5 @@
 
-import "./ItemListContainer.scss"
+
 import { useState, useEffect } from "react"
 import ItemList from "../ItemList/Itemlist"
 import { getFirestore, collection, getDocs, query, where } from "firebase/firestore"
