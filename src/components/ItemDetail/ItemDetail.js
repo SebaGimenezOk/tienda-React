@@ -26,13 +26,16 @@ const ItemDetail = ({ infodetalle }) => {
                     <span className="precioDetalle">$: {price}  arg   </span>
                     <p className="tituloStock">Stock: {stock} units</p>
                     <p> description:   <p className="textoDescription"> {description}</p></p>
+
                 </div>
                 <div className="item-number">
                     {
-                        goToCart ? <Link to="/Cart">Terminar Compra</Link>
+                        goToCart ? <Link className="item-numbers" to="/Cart">Ir al Carrito</Link>
                             : <ItemCount initial={0} stock={20} onAdd={onAdd} />
                     }
+
                 </div>
+                <Link to='/' className="tituloAgrega"> agregar mas productos</Link>
             </div>
 
         </Link>

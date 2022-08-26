@@ -51,4 +51,3 @@ const Cart = () => {
 }
 export default Cart
 
-// {/* <Link to='/Contact'> </Link> */}

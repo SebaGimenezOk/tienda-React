@@ -1,6 +1,5 @@
 
 import "./ItemListContainer.scss"
-// import products from "../../utils/products.mock"
 import { useState, useEffect } from "react"
 import ItemList from "../ItemList/Itemlist"
 import { getFirestore, collection, getDocs, query, where } from "firebase/firestore"
@@ -14,11 +13,10 @@ const ItemListContainer = () => {
 
         const querydb = getFirestore()
         const queryCollection = collection(querydb, 'Productos')
-       
-  
+
         if(productoId){
             const queryFiltro = query(queryCollection, where('category','==','productoId'))
-             getDocs(queryFiltro)
+            getDocs(queryFiltro)
             .then(res => newLista(res.docs.map(product => ({ id: product.id, ...product.data() }))))
             
         }     else{
@@ -27,22 +25,10 @@ const ItemListContainer = () => {
             
         } 
         
-       
-
-        // const getProducts = new Promise(resolve => {
-        //     resolve(products)
-        // })
-        // getProducts
-        //     .then((res) => {
-        //         newLista(res)
-        //     })
-        //     .catch((error) => {
-        //         console.log("error")
-        //     })
     }, [productoId])
 
     return (
-        <div className="lista-home">
+        <div className="lista-inicio">
             <h1 className="titulosybotones">lista productos</h1>
             <ItemList infoproductos={lista} />
         </div>
