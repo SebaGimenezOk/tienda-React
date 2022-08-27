@@ -4,6 +4,8 @@ import { useState, useEffect } from "react"
 import ItemList from "../ItemList/Itemlist"
 import { getFirestore, collection, getDocs, query, where } from "firebase/firestore"
 import { useParams } from "react-router-dom"
+import './ItemListContainer.scss'
+
 
 const ItemListContainer = () => {
 
@@ -28,7 +30,7 @@ const ItemListContainer = () => {
     }, [productoId])
 
     return (
-        <div className="lista-inicio">
+        <div className="contenedorLista">
             <h1 className="titulosybotones">lista productos</h1>
             <ItemList infoproductos={lista} />
         </div>
