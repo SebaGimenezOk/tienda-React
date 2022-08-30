@@ -5,74 +5,53 @@
     border-style: solid;
     border-color: rgb(248, 79, 79);
     border-radius: 23px;
+    color: aliceblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     text-transform: uppercase;
-    color: aliceblue;
+    background-color: rgba(8, 6, 14, 0.747);
+    margin-inline: 34px;
+    margin-left: 20%;
     padding: 1rem;
-    margin-left: 25%;
+}
+
+.linealForm{
+     margin: 5px;
+     letter-spacing: 1px;
+
+}
+.linealHolder{
+    border-width: 1.4px;
+    border-style: solid;
+    border-color: rgb(248, 79, 79);
+    border-radius: 4px;
+    margin-left: 8px;
+    background-color: transparent;
     
-
 }
-.titulo-detail{
-    display: flex;
-    flex-direction: column;
-}
-
-.tituloFormu{
+.titularForm{
+    margin-bottom: 35px;
     font-weight: 100;
-    font-size: 23px;
-     margin-bottom: 2rem;
+    font-size: 37px;
 }
 
+.linealcheck{
+    margin: 4px;
+  
+}
 .caja-foto {
     width: 60%;
     height: 60%;
 }
 
-.tituloDetalle{
-    color: aliceblue;
-    text-transform: uppercase;
-    font-size: 43px;
-    font-weight: 300;
-  
-
-}
-
-.precioDetalle{
-    color: aliceblue;
-    text-transform: uppercase;
-    font-size: 29px;
-    font-weight: 300;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
 
 
-.tituloStock{
-    color: rgb(228, 95, 18);
-    text-transform: uppercase;
-    font-size: 21px;
-    font-weight: 400;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem;
-}
-.textoDescription{
-    color: aliceblue;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 12px;
-    font-weight: 100;
-    display: flex;
-    margin-bottom: 2rem;
-    
-}
+
+
+
+
+
 

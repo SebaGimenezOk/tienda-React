@@ -32,8 +32,8 @@ const Cart = () => {
     if (carroProd.length === 0) {
         return (
             <>
-                <p className="tituloDetalle"> No hay elementos en el carrito</p>
-                <Link to='/' className="tituloLink"> Compra algo</Link>
+                <p className="tituloNada"> No hay elementos en el carrito</p>
+                <Link to='/' className="tituloAlgo"> Compranos  algo  </Link>
             </>
         )
     }
@@ -43,8 +43,8 @@ const Cart = () => {
                 carroProd.map(producto => <ItemCart key={producto.id} producto={producto} />)
             }
             </div>
-                <p className="tituloDetalle">total: $ {precioTotal()}</p>
-                <button className="tituloLink" onClick={handleClick}>Pagar</button>
+                <p className="tituloTotal">total: $ {precioTotal()}</p>
+                <button className="tituloPagar" onClick={handleClick}>Pagar</button>
         </>
     )
 

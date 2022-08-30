@@ -16,23 +16,23 @@ const ItemListContainer = () => {
         const querydb = getFirestore()
         const queryCollection = collection(querydb, 'Productos')
 
-        if(productoId){
-            const queryFiltro = query(queryCollection, where('category','==','productoId'))
+        if (productoId) {
+            const queryFiltro = query(queryCollection, where('category', '==', 'productoId'))
             getDocs(queryFiltro)
-            .then(res => newLista(res.docs.map(product => ({ id: product.id, ...product.data() }))))
-            
-        }     else{
+                .then(res => newLista(res.docs.map(product => ({ id: product.id, ...product.data() }))))
+
+        } else {
             getDocs(queryCollection)
-            .then(res => newLista(res.docs.map(product => ({ id: product.id, ...product.data() }))))
-            
-        } 
-        
+                .then(res => newLista(res.docs.map(product => ({ id: product.id, ...product.data() }))))
+
+        }
+
     }, [productoId])
 
     return (
         <div className="contenedorLista">
-            <h1 className="titulosybotones">lista productos</h1>
-            <ItemList infoproductos={lista} />
+                    <h1 className="titulosybotones">lista productos</h1>
+                    <ItemList infoproductos={lista} />
         </div>
     )
 }

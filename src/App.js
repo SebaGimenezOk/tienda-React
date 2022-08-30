@@ -17,6 +17,7 @@ function App() {
   return (
     <CartProvider>
     <BrowserRouter>
+    <div className="fondo"> 
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -28,6 +29,7 @@ function App() {
           <Route path="*" element={<h1 className="titulos-detail">Error 404 - Página no encontrada.</h1>} />
         </Routes>
       <Footer />
+      </div>
     </BrowserRouter>
     </CartProvider>
   );

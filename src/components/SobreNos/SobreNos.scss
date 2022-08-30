@@ -1,78 +1,48 @@
-
-.baseFormulario {
-    width: 55%;
+.bloqueNosotros {
+    width: 45%;
     border-width: 1.4px;
     border-style: solid;
     border-color: rgb(248, 79, 79);
     border-radius: 23px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
     text-align: center;
-    text-transform: uppercase;
+ 
     color: aliceblue;
-    padding: 1rem;
-    margin-left: 25%;
-    
+    padding: 3rem;
+    background-color: rgba(8, 6, 14, 0.789);
 
 }
-.titulo-detail{
+
+.bloqueNosotros2 {
+    border-width: 1.4px;
+    border-style: solid;
+    border-color: rgb(248, 79, 79);
+    border-radius: 23px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+
+    color: aliceblue;
+    padding: 3rem;
+    margin-left: 40%;
+    margin-bottom: 23px;
+    margin-top: 33px;
+    background-color: rgba(8, 6, 14, 0.789);
 }
 
-.tituloFormu{
+.tituloNos {
+    font-size: 34px;
     font-weight: 100;
-    font-size: 23px;
-     margin-bottom: 2rem;
-}
-
-.caja-foto {
-    width: 60%;
-    height: 60%;
-}
-
-.tituloDetalle{
-    color: aliceblue;
+    margin-bottom: 2px;
+    margin-right: 23px;
     text-transform: uppercase;
-    font-size: 43px;
-    font-weight: 300;
-  
 
 }
 
-.precioDetalle{
-    color: aliceblue;
-    text-transform: uppercase;
-    font-size: 29px;
-    font-weight: 300;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.tituloStock{
-    color: rgb(228, 95, 18);
-    text-transform: uppercase;
-    font-size: 21px;
-    font-weight: 400;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem;
-}
-.textoDescription{
-    color: aliceblue;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 12px;
+.parrafoNos {
     font-weight: 100;
-    display: flex;
-    margin-bottom: 2rem;
-    
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-align: start;
 }
-
