@@ -4,12 +4,13 @@ import "../App.scss"
 
 
 
+
+
 const Home = () => {
   return (
-    <div className="main-container">
-    <ItemListContainer />
- 
-  </div>
+    <> 
+      <ItemListContainer />
+    </>
   )
 }
 export default Home;

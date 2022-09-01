@@ -104,3 +104,74 @@ a{
     text-transform: uppercase;
     
 }
+.estiloGeneral{
+    display: flex;
+    background-color: aqua;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----Media Queries Tablet ------------------------------ */
+
+@media screen and (max-width: 1024px) {
+  
+.contenedorLista{
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    align-items: center;
+    align-content: center;
+}
+
+}
+
+
+
+
+/* -----Media Queries Mobile -------------------------- */
+@media screen and (max-width: 600px){
+            
+    .contenedorLista{
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        align-items: center;
+        align-content: center;
+    }
+       
+          
+    .footer {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        align-items: center;
+        align-content: center;
+        height: auto;
+    }
+
+    
+.iconos-footer{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    align-items: center;
+    align-content: center;
+}
+
+
+
+}           

@@ -24,6 +24,9 @@
     align-items: baseline;
     gap: 2rem;
     font-size: 17px;
+    :hover{
+        color: aqua;
+    }
 }
 .titulo-footer{
     text-transform: uppercase;

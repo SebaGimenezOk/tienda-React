@@ -33,7 +33,7 @@ const Cart = () => {
         return (
             <>
                 <p className="tituloNada"> No hay elementos en el carrito</p>
-                <Link to='/' className="tituloAlgo"> Compranos  algo  </Link>
+                <Link to='/' className="tituloAlgo"> Compremos  algo  </Link>
             </>
         )
     }
