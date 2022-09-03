@@ -2,14 +2,43 @@
 .modal-custom {
     position: fixed;
     z-index: 1;
+    top: 50%;
     left: 50%;
-    top:50%;
-    transform: translate(-50%,-50% );
-    width: 40vw;
-    height: 70vh;
-    padding: 2rem;
-    margin: 2rem;
-    text-transform: uppercase;
-    background-color: rgb(255, 255, 255);
-    
+    transform: translate(-50%, -50%);
+    background-image: url(../../../public/assets/comidaAbajo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background: rgb(87, 3, 3);
+    width: 100vw;
+    height: 100vh;
+    box-shadow: 1px 5px 5px #00000047;
+    border-radius: 5px;
+    padding: 4rem;
+    overflow: hidden;
+}
+.modal-custom svg {
+    position: absolute;
+    right: 110px;
+    top: 50px;
+    cursor: pointer;
+    font-size: 34px;
+    color: aliceblue;
+    box-shadow: 1px 5px 5px #00000047;
+}
+
+
+.tituloPagar{
+    position: absolute;
+    right: 39%;
+    top: 100%;
+    cursor: pointer;
+
+
+}
+.tituloPagar2{
+  
+    right: 46%;
+    top: 81%;
+    cursor: pointer;
+    margin-top: 1rem;
 }

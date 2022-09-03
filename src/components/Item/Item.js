@@ -12,7 +12,9 @@ const Item= ({ data }) => {
                 <p>{title}</p>
                 <span>$ {price}</span>
                 <p className="tituloStock">stock: {stock} unidades</p>
-                <Link className="tituloAgrega" to={`/Products/${id}`}> <p>Ver Mas</p></Link>
+                <Link className="tituloAgrega" to={`/Products/${id}`}> 
+                <p>Ver Mas</p>
+                </Link>
             </div>
         </div>
         </Link>

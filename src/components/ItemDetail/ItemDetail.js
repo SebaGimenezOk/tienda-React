@@ -25,8 +25,8 @@ const ItemDetail = ({ infodetalle }) => {
                     <h1 className="tituloDetalle">Producto:  {title}</h1>
                     <span className="precioDetalle">$: {price}  arg   </span>
                     <p className="tituloStock">Stock: {stock} unidades</p>
-                    <p> Descripcion de Producto:   <p className="textoDescription"> {description}</p></p>
-
+                    <p> Descripcion de Producto: </p>
+                    <p className="textoDescription"> {description}</p>
                 </div>
                 <div className="item-number">
                     {
