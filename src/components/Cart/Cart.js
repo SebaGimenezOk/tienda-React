@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import './Cart.scss'
 import { Link } from "react-router-dom"
@@ -49,15 +50,14 @@ const Cart = () => {
         console.log("orden generada", OrderDoc);
     }
 
-
-
-
     if (carroProd.length === 0) {
         return (
-            <>
+            <div className="fondox">
                 <p className="tituloNada"> No hay elementos en el carrito</p>
-                <Link to='/' className="tituloAlgo"> Compremos  algo  </Link>
-            </>
+           <Link to='/' className="tituloAlgo"> Compremos  algo</Link>  
+            </div>
+
+
         )
     }
     return (
@@ -75,6 +75,7 @@ const Cart = () => {
                     {success ? (
                         <div className="CajaTicketFinal">
                             <img className="logoModal" src="/assets/favicon-blanco.png" alt="logo" />
+
                             <h2 className="tituloTicketFinal"> Su orden esta hecha! ....muchas gracias! </h2>
                         </div>
                     ) : (

@@ -9,30 +9,29 @@ import './ItemListContainer.scss'
 
 const ItemListContainer = () => {
 
-    const [lista, newLista] = useState([])
-    const { productoId } = useParams()
+    const [lista, setLista] = useState([])
+    const { categoryId } = useParams()
+
     useEffect(() => {
 
         const querydb = getFirestore()
         const queryCollection = collection(querydb, 'Productos')
+        const queryFiltro = query(queryCollection, where('category', '==', categoryId))
 
-        if (productoId) {
-            const queryFiltro = query(queryCollection, where('category', '==', 'productoId'))
+        if (categoryId) {
             getDocs(queryFiltro)
-                .then(res => newLista(res.docs.map(product => ({ id: product.id, ...product.data() }))))
+                .then(res => setLista(res.docs.map(product => ({ id: product.id, ...product.data() }))))
 
         } else {
             getDocs(queryCollection)
-                .then(res => newLista(res.docs.map(product => ({ id: product.id, ...product.data() }))))
-
+                .then(res => setLista(res.docs.map(product => ({ id: product.id, ...product.data() }))))
         }
-
-    }, [productoId])
+    }, [categoryId])
 
     return (
         <div className="contenedorLista">
-                    <h1 className="titulosybotones">lista productos</h1>
-                    <ItemList infoproductos={lista} />
+            <h1 className="titulosybotones">lista productos</h1>
+            <ItemList infoproductos={lista} />
         </div>
     )
 }

@@ -14,7 +14,7 @@ const ItemDetail = ({ infodetalle }) => {
         setGoToCart(true)
         addProducto(infodetalle, quantity)
     }
-    const { title, price, img, stock, id, description } = infodetalle
+    const { title, price, img, stock, id, description, category } = infodetalle
 
     return (
 
@@ -23,6 +23,7 @@ const ItemDetail = ({ infodetalle }) => {
                 <img className="caja-foto" src={`/assets/${img}`} alt="Imagen producto" />
                 <div className="titulo-detail">
                     <h1 className="tituloDetalle">Producto:  {title}</h1>
+                    <p className="tituloStock">Categoria: {category} </p>
                     <span className="precioDetalle">$: {price}  arg   </span>
                     <p className="tituloStock">Stock: {stock} unidades</p>
                     <p> Descripcion de Producto: </p>

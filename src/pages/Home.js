@@ -1,15 +1,18 @@
 
-import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
+
 import "../App.scss"
 
-
+import Contact from "./Contact";
+import Nosotros from "./Nosotros";
 
 
 
 const Home = () => {
   return (
-    <> 
-      <ItemListContainer />
+    <>
+      <Nosotros />
+ 
+      <Contact />
     </>
   )
 }

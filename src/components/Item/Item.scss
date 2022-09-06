@@ -1,4 +1,5 @@
 .tarjetaProducto {
+    max-width: 80%;
     border-width: 1.4px;
     border-style: solid;
     border-color: rgb(248, 79, 79);
@@ -27,6 +28,7 @@
     font-weight: 300;
     margin: 1rem;
     gap: 1rem;
+
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -44,19 +46,7 @@
     align-items: center;
 }
 
-button{
-    text-decoration: none;
-    list-style: none;
-}
-li{
-    text-decoration: none;
-    list-style: none;
-}
-a{ 
-    
-    text-decoration: none;
-    list-style: none;
-}
+
 .descript{
     color: aliceblue;
     text-transform: uppercase;
