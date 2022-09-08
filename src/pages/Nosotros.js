@@ -1,7 +1,7 @@
 import SobreNos from "../components/SobreNos/SobreNos";
 
 const Nosotros = () => {
-    return (
+    return(
         <div className="main-container">
             <SobreNos/>
         </div>

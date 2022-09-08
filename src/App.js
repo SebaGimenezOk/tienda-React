@@ -9,8 +9,11 @@ import Nosotros from "./pages/Nosotros";
 import Cart from "./pages/Cart";
 // import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Contact from "./pages/Contact";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+// import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+// import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import Detail from "./pages/Detail"
+import Products from "./pages/Products"
+
 
 
 function App() {
@@ -21,9 +24,9 @@ function App() {
     <div className="fondo"> 
         <NavBar />
         <Routes>
-          <Route path='/' element={<Home/>} />
-          <Route path='/category/:categoryId' element={<ItemListContainer />} />
-          <Route path='/Products/:productoId' element={<ItemDetailContainer />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/category/:categoryId' element={<Products />} />
+          <Route path='/Products/:productoId' element={<Detail />} />
           <Route path='/Nosotros' element={<Nosotros />} />
           <Route path='/Contact' element={<Contact />} />
           <Route path='/Cart' element={<Cart />}/> 
