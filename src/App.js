@@ -9,8 +9,6 @@ import Nosotros from "./pages/Nosotros";
 import Cart from "./pages/Cart";
 // import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Contact from "./pages/Contact";
-// import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-// import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Detail from "./pages/Detail"
 import Products from "./pages/Products"
 

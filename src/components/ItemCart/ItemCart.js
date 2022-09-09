@@ -8,7 +8,9 @@ const ItemCart = ({ producto }) => {
     const { title, price, img, id, quantity } = producto
     return (
         <>
+          
             <div className="itemCart">
+                
                 <img src={`/assets/${img}`} alt={title} />
                 <p> Producto:  {title} </p>
                 <p> Cantidad:   {quantity} unidades </p>

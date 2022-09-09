@@ -1,5 +1,4 @@
 
-
 import { useState, useEffect } from "react"
 import ItemList from "../ItemList/Itemlist"
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore"
@@ -29,10 +28,14 @@ const ItemListContainer = () => {
 
 
     return (
-        <div className="contenedorLista">
-            <h1 className="titulosybotones">lista productos</h1>
-            <ItemList infoproductos={lista} />
-        </div>
+        <>
+            <h1 className="tituloItemListCont">Lista de Productos </h1>
+            
+            <div className="contenedorLista">
+                <ItemList infoproductos={lista} />
+            </div>
+        </>
+
     )
 }
 export default ItemListContainer;

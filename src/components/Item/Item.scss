@@ -1,5 +1,6 @@
 .tarjetaProducto {
-    max-width: 80%;
+    width: 300px;
+    height: 450px;
     border-width: 1.4px;
     border-style: solid;
     border-color: rgb(248, 79, 79);
@@ -10,15 +11,16 @@
     align-items: center;
     text-align: center;
     text-transform: uppercase;
-    margin-inline: 23px;
-    padding: 23px;
-    margin: 23px;
+    // margin-inline: 23px;
+    // padding: 23px;
+    // margin: 23px;
     background-color: rgba(8, 6, 14, 0.790);
 }
 
 .caja-foto {
     width: 50%;
     height: 50%;
+    margin-bottom: 2rem;
 }
 
 .titulosybotones {
@@ -26,8 +28,8 @@
     text-transform: uppercase;
     font-size: 23px;
     font-weight: 300;
-    margin: 1rem;
-    gap: 1rem;
+    // margin: 1rem;
+    // gap: 1rem;
 
     display: flex;
     justify-content: center;

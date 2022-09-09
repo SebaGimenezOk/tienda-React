@@ -13,7 +13,7 @@ import Modal from "../Modal/Modal";
 const Cart = () => {
 
     const [showModal, setShowModal] = useState(false)
-    const { carroProd, precioTotal } = useCartContext();
+    const { carroProd, precioTotal, limpiarCarro } = useCartContext();
 
     const [formData, setFormData] = useState({
         name: '',
@@ -37,7 +37,7 @@ const Cart = () => {
 
     const submitData = (e) => {
         e.preventDefault()
-        console.log("orden:", { ...Order, buyer: formData })
+  
         pushData({ ...Order, buyer: formData })
 
     }
@@ -47,7 +47,7 @@ const Cart = () => {
         const collectionOrder = collection(db, 'ordenes')
         const OrderDoc = await addDoc(collectionOrder, newOrder)
         setSuccess(OrderDoc.id)
-        console.log("orden generada", OrderDoc);
+    
     }
 
     if (carroProd.length === 0) {
@@ -75,8 +75,8 @@ const Cart = () => {
                     {success ? (
                         <div className="CajaTicketFinal">
                             <img className="logoModal" src="/assets/favicon-blanco.png" alt="logo" />
-
-                            <h2 className="tituloTicketFinal"> Su orden esta hecha! ....muchas gracias! </h2>
+                            <h2 className="tituloTicketFinal"> Compra realizada con éxito. </h2>
+                            <button className="limpiar" onClick={() => limpiarCarro()}>Salir</button>
                         </div>
                     ) : (
                         <form className='formularioTicket' onSubmit={submitData}>

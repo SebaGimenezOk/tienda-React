@@ -1,5 +1,24 @@
-.contenedorLista{
+.contenedorLista {
     display: flex;
-    
-    
+    align-items: flex-start;
+    flex-wrap: wrap;
+    min-height: 30vh;
+    margin: auto;
+    margin-left: 10%;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    gap: 5rem;
+}
+
+.tituloItemListCont {
+    color: aliceblue;
+    text-transform: uppercase;
+    font-size: 53px;
+    font-weight: 300;
+    margin: auto;
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }

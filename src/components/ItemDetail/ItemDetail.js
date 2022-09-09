@@ -20,7 +20,7 @@ const ItemDetail = ({ infodetalle }) => {
 
         <Link to={`/Products/${id}`}>
             <div className="item-product">
-                <img className="caja-foto" src={`/assets/${img}`} alt="Imagen producto" />
+                <img className="cajaFotoItemDetail" src={`/assets/${img}`} alt="Imagen producto" />
                 <div className="titulo-detail">
                     <h1 className="tituloDetalle">Producto:  {title}</h1>
                     <p className="tituloStock">Categoria: {category} </p>

@@ -7,10 +7,12 @@
     font-family: Oswald;
     margin: 0;
     box-sizing: border-box;
+    
  }
 
 
 body{
+   
     background-color: rgb(17, 16, 16);
 
   
@@ -19,16 +21,20 @@ body{
 }
 .main-container{
     display: flex;
-    padding: 1rem;
+
   
 }
 
 .fondo{
     background-color: rgba(0, 0, 0, 0.164);
     background-image: url(../public/assets/pizza.jpg);
-    object-fit: cover;
-   background-size:cover;
+    
     background-repeat: no-repeat;
+    background-size: auto ;
+
+
+
+
 }
 
 .caja-foto {
